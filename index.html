@@ -2,11 +2,132 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Precision Health Calculator - BMI, BMR, TDEE, Macros & Weight Loss</title>
-    <meta name="description" content="Free health calculator suite for BMI, BMR, TDEE, calorie goals, macros, and weight loss timeline. Science-based formulas for fitness and nutrition planning." />
-    <meta name="keywords" content="BMI calculator, BMR calculator, TDEE calculator, macro calculator, weight loss calculator, calorie calculator, fitness calculator" />
+
+    <!-- Primary SEO -->
+    <title>Free BMI, TDEE & Macro Calculator | Calorie Calculator for Weight Loss — Precision Health Tools</title>
+    <meta name="description" content="Calculate your BMI, BMR, TDEE, daily calories, and macros in seconds. Science-based Mifflin-St Jeor formulas. Free tool — no signup required. Find out how many calories you should eat to lose weight." />
+    <meta name="keywords" content="BMI calculator, TDEE calculator, macro calculator, calorie calculator for weight loss, how many calories should I eat, BMR calculator, protein calculator, weight loss calculator, daily calorie intake, macro ratio for fat loss" />
+    <meta name="author" content="Precision Health Tools" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://precision-health-tools.vercel.app/" />
+
+    <!-- Open Graph (Facebook, LinkedIn, AI crawlers) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Free BMI, TDEE & Macro Calculator — How Many Calories Should I Eat?" />
+    <meta property="og:description" content="Science-based health calculator suite. Calculate BMI, BMR, TDEE, calorie goals, macros, and weight loss timeline. Mifflin-St Jeor formula. 100% free." />
+    <meta property="og:url" content="https://precision-health-tools.vercel.app/" />
+    <meta property="og:site_name" content="Precision Health Tools" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free BMI, TDEE & Macro Calculator — Precision Health Tools" />
+    <meta name="twitter:description" content="Calculate your BMI, TDEE, macros, and calorie goals. Science-based formulas, instant results, no signup." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>" />
+
+    <!-- JSON-LD: WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Precision Health Calculator",
+      "url": "https://precision-health-tools.vercel.app/",
+      "description": "Free online calculator for BMI, BMR, TDEE, daily calories, macronutrients, and weight loss timeline. Uses the Mifflin-St Jeor equation for accurate results.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Precision Health Tools",
+        "url": "https://precision-health-tools.vercel.app/"
+      },
+      "featureList": [
+        "BMI Calculator with category classification",
+        "BMR Calculator using Mifflin-St Jeor equation",
+        "TDEE Calculator with 5 activity levels",
+        "Calorie goal calculator for weight loss, maintenance, and muscle gain",
+        "Macronutrient calculator (protein, carbs, fat)",
+        "Weight loss timeline estimator"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many calories should I eat to lose weight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To lose weight, eat 500 calories below your TDEE (Total Daily Energy Expenditure). First calculate your BMR using the Mifflin-St Jeor equation, multiply by your activity factor to get TDEE, then subtract 500 for a safe deficit of about 1 pound per week. For example, a 30-year-old male, 175cm, 75kg with moderate activity has a TDEE of ~2,633 kcal — a fat loss target would be ~2,106 kcal/day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is TDEE and how is it calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TDEE (Total Daily Energy Expenditure) is the total number of calories your body burns per day including exercise. It's calculated by multiplying your BMR (Basal Metabolic Rate) by an activity multiplier: Sedentary (×1.2), Light exercise (×1.375), Moderate exercise (×1.55), Heavy exercise (×1.725), or Athlete (×1.9). TDEE is the most important number for weight management."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my macros for weight loss?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with your calorie goal (TDEE minus deficit). Set protein at 1.6-2.2g per kg of body weight (higher preserves muscle during a cut). Set fat at 25-30% of total calories. Fill remaining calories with carbohydrates. For a 75kg person eating 2,100 calories: ~135g protein (26%), ~234g carbs (44%), ~70g fat (30%)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is BMI and what is a normal BMI range?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI (Body Mass Index) is calculated as weight in kg divided by height in meters squared. A normal BMI range is 18.5-24.9. Under 18.5 is underweight, 25-29.9 is overweight, and 30+ is obese. BMI is a screening tool, not a diagnostic — it doesn't account for muscle mass, bone density, or body composition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Mifflin-St Jeor equation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Mifflin-St Jeor equation is the most accurate formula for estimating BMR (Basal Metabolic Rate). For men: BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5. For women: BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161. Published in 1990, it's recommended by the Academy of Nutrition and Dietetics over the older Harris-Benedict equation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate are online calorie calculators?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Mifflin-St Jeor equation used in this calculator is accurate to within ±10% for most people, according to research published in the Journal of the American Dietetic Association. Individual variation depends on genetics, body composition, hormones, and metabolic adaptation. Use calculated values as a starting point and adjust based on real-world results over 2-4 weeks."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Precision Health Tools",
+      "url": "https://precision-health-tools.vercel.app/",
+      "description": "Free, science-based health and fitness calculators"
+    }
+    </script>
 
     <!-- Google AdSense -->
     <meta name="google-adsense-account" content="ca-pub-2599493016668494">
